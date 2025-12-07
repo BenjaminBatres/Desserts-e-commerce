@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-redhat: var(--font-redhat);
+  --color-Red: hsl(14, 86%, 42%);
+  --color-Green: hsl(159, 69%, 38%);
+  --color-Rose-50: hsl(20, 50%, 98%);
+  --color-Rose-100: hsl(13, 31%, 94%);
+  --color-Rose-300: hsl(14, 25%, 72%);
+  --color-Rose-400: hsl(7, 20%, 60%);
+  --color-Rose-500: hsl(12, 20%, 44%%);
+  --color-Rose-500: hsl(12, 20%, 44%);
+  --color-Rose-900: hsl(14, 65%, 9%);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --breakpoint-tablet: 1280px;
+  --breakpoint-phone: 700px
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-Rose-50);
+  font-family: var(--font-redhat);
 }
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 400ms ease;
+}
+
+
