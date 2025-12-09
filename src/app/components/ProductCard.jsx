@@ -16,7 +16,7 @@ export default function ProductCard({ product, id }) {
   const itemInCart = cartItem.find((item) => item.id === id);
 
   return (
-    <div className="sm:w-[48%] md:w-[32%] mt-4">
+    <div className="sm:w-[48%] md:w-[32%]">
       <figure className="mb-7 relative">
         <Image
           src={product.desktopImage}
