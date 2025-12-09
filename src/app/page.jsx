@@ -146,7 +146,7 @@ export default function Home() {
             <div className="text-4xl font-semibold text-Rose-900 mb-4">
               Desserts
             </div>
-            <div className="flex flex-col sm:flex-row sm:justify-between flex-wrap gap-5 sm:gap-0">
+            <div className="flex flex-col sm:flex-row sm:justify-between flex-wrap">
               {productList.map((product, id) => (
                 <ProductCard product={product} key={id} id={id} />
               ))}

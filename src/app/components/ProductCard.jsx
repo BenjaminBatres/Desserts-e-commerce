@@ -30,15 +30,15 @@ export default function ProductCard({ product, id }) {
         ></Image>
         <Image
           src={product.mobileImage}
-          className={`w-full h-full max-h-[250px] rounded-2xl block md:hidden ${itemInCart ? 'border-2 border-Red' : ''}`}
+          className={`w-full rounded-2xl block md:hidden ${itemInCart ? 'border-2 border-Red' : ''}`}
           alt=""
         ></Image>
 
         {itemInCart ? (
           <div
-            className="absolute -bottom-4 left-[28%] sm:left-[25%] md:left-[15%] xl:left-[25%]
-      px-7 sm:px-5 tablet:px-7 py-2.5 rounded-3xl flex justify-center gap-2 
-      w-40 transition-all duration-300 bg-Red"
+            className="absolute -bottom-4 left-1/2 -translate-x-1/2
+    px-7 py-2.5 rounded-3xl flex justify-center gap-2 
+    w-40 transition-all duration-300 bg-Red"
           >
             <div className="flex justify-between w-full">
               {/* Decrement */}
@@ -87,9 +87,9 @@ export default function ProductCard({ product, id }) {
                 })
               )
             }
-            className="absolute -bottom-4 left-[28%] md:left-[20%] tablet:left-[22%] xl:left-[25%]
+            className="absolute -bottom-4 left-1/2 -translate-x-1/2
       px-7 sm:px-5 tablet:px-7 py-2.5 rounded-3xl bg-Rose-50 border 
-      border-Rose-400 flex gap-2 cursor-pointer transition-all duration-300 
+      border-Rose-400 flex justify-center gap-2 w-45 cursor-pointer transition-all duration-300 
       hover:border-Red hover:text-Red"
           >
             <Image src={AddToCartIcon} alt="" />
