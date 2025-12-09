@@ -30,7 +30,7 @@ export default function ProductCard({ product, id }) {
         ></Image>
         <Image
           src={product.mobileImage}
-          className={`w-full rounded-2xl block md:hidden ${itemInCart ? 'border-2 border-Red' : ''}`}
+          className={`w-full h-full max-h-[250px] rounded-2xl block md:hidden ${itemInCart ? 'border-2 border-Red' : ''}`}
           alt=""
         ></Image>
 
